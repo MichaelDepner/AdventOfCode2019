@@ -13,8 +13,8 @@ namespace AdventOfCode2019
             var day = Console.ReadLine();
             System.Console.Write("Input part (1 or 2): ");
             var part = Console.ReadLine();
-            ISolver executor = (ISolver)Activator.CreateInstance(Type.GetType("AdventOfCode2019.Day"+day+"_"+part));
-            string input = System.IO.File.ReadAllText("Day"+day+"_"+part+".txt");
+            ISolver executor = (ISolver)Activator.CreateInstance(Type.GetType("AdventOfCode2019.Day"+day+".Day"+day+"_"+part));
+            string input = System.IO.File.ReadAllText("Day"+day+"/Day"+day+"_"+part+".txt");
             System.Console.WriteLine(executor.Solve(input));
         }
 
