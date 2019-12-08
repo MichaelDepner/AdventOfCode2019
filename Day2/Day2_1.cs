@@ -9,7 +9,10 @@ namespace AdventOfCode2019.Day2
         public string Solve(string input)
         {
             List<int> lines = input.Split(",").Select( x => Convert.ToInt32(x)).ToList();
-            
+
+            lines[1] = 12;
+            lines[2] = 2;
+
             //lines = new List<int>(){1,1,1,4,99,5,6,0,99}; //Uncomment to try other lists
 
             return IntCode(lines, 0).ToString();
